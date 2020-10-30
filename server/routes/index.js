@@ -1,0 +1,24 @@
+//MIDTERM TEST -
+//Student: Amish tangri 301108446
+//Course: Web Application Development SEC.001  COMP229004-2020F
+//Date: October 29, 2020 -->
+
+
+
+// modules required for routing
+let express = require('express');
+let router = express.Router();
+let mongoose = require('mongoose');
+
+// define the game model
+let book = require('../models/books');
+
+/* GET home page. wildcard */
+router.get('/', (req, res, next) => {
+  res.render('content/index', {
+    title: 'Home',
+    books: ''
+   });
+});
+
+module.exports = router;
